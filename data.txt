@@ -1,0 +1,330 @@
+const content: Record<
+  ContentKeys,
+  {
+    title: string;
+    description: string;
+    sections: Array<{ title: string; content: string }>;
+    form: number;
+  }
+> = {
+  "intro-to-chemistry": {
+    title: "Introduction to Chemistry",
+    description: "Learn the fundamental concepts and principles of chemistry",
+    sections: [
+      {
+        title: "What is Chemistry?",
+        content: `Chemistry is the study of matter and the changes it undergoes.
+
+
+    Key Points:
+  • Chemistry explains the composition of matter
+  • It helps us understand changes in substances
+  • Applications range from medicine to technology,
+        `,
+      },
+      {
+        title: "Laboratory Safety",
+        content: `Safety is paramount in any chemistry laboratory. Following proper safety procedures protects both you and others.
+  
+  Essential Safety Rules:
+  • Always wear safety goggles
+  • No eating or drinking in the lab
+  • Know emergency procedures
+  • Handle chemicals with care`,
+      },
+    ],
+
+    form: 1,
+  },
+  "states-of-matter": {
+    title: "States of Matter",
+    description:
+      "Understanding the different states of matter and their properties",
+    sections: [
+      {
+        title: "Introduction to States of Matter",
+        content: `Matter exists in different states with distinct properties. The three main states are solids, liquids, and gases.
+
+Key Characteristics:
+• Solids have fixed shape and volume
+• Liquids have fixed volume but take container's shape
+• Gases have no fixed shape or volume`,
+      },
+    ],
+    form: 1,
+  },
+  "acids-bases-indicators": {
+    title: "Acids, Bases, and Indicators",
+    description: "Learn about the properties of acids and bases",
+    sections: [
+      {
+        title: "Acids and Bases",
+        content: `Acids and bases are two types of chemical substances with distinct properties.`,
+      },
+    ],
+    form: 1,
+  },
+  "air-and-combustion": {
+    title: "Air and Combustion",
+    description:
+      "Understanding the composition of air and combustion reactions",
+    sections: [
+      {
+        title: "Composition of Air",
+        content: `Air is a mixture of gases, mainly nitrogen and oxygen.`,
+      },
+    ],
+    form: 1,
+  },
+
+  "water-and-hydrogen": {
+    title: "Water and Hydrogen",
+    description: "Learn about the properties of water and hydrogen",
+    sections: [
+      {
+        title: "Water",
+        content: `Water is a compound of hydrogen and oxygen.`,
+      },
+    ],
+    form: 1,
+  },
+  "structure-of-the-atom": {
+    title: "Structure of the Atom",
+    description: "Understanding the structure of atoms and the periodic table",
+    sections: [
+      {
+        title: "Atomic Structure",
+        content: `Atoms are composed of protons, neutrons, and electrons.`,
+      },
+    ],
+    form: 2,
+  },
+  "chemical-families": {
+    title: "Chemical Families",
+    description:
+      "Learn about the different chemical families and their properties",
+    sections: [
+      {
+        title: "Alkali Metals",
+        content: `Alkali metals are highly reactive and form alkaline solutions when combined with water.`,
+      },
+    ],
+    form: 2,
+  },
+  "properties-and-trends": {
+    title: "Properties and Trends",
+    description: "Learn about the properties of elements and periodic trends",
+    sections: [
+      {
+        title: "Periodic Trends",
+        content: `The periodic table organizes elements by atomic number and properties.`,
+      },
+    ],
+    form: 2,
+  },
+  "structure-and-bonding": {
+    title: "Structure and Bonding",
+    description:
+      "Understanding the structure of molecules and chemical bonding",
+    sections: [
+      {
+        title: "Chemical Bonding",
+        content: `Chemical bonds hold atoms together in molecules.`,
+      },
+    ],
+    form: 2,
+  },
+  salts: {
+    title: "Salts",
+    description: "Learn about the properties and formation of salts",
+    sections: [
+      {
+        title: "Formation of Salts",
+        content: `Salts are formed from the reaction of acids and bases.`,
+      },
+    ],
+    form: 2,
+  },
+  "electrolysis-1": {
+    title: "Electrolysis 1",
+    description: "Introduction to electrolysis and its applications",
+    sections: [
+      {
+        title: "What is Electrolysis?",
+        content: `Electrolysis is a process that uses electricity to drive a non-spontaneous chemical reaction.`,
+      },
+    ],
+    form: 2,
+  },
+  "carbon-and-its-compounds": {
+    title: "Carbon and its Compounds",
+    description: "Learn about the properties and reactions of carbon compounds",
+    sections: [
+      {
+        title: "Organic Chemistry",
+        content: `Organic chemistry is the study of carbon compounds.`,
+      },
+    ],
+    form: 2,
+  },
+  "gas-laws": {
+    title: "Gas Laws",
+    description:
+      "Understanding the behavior of gases under different conditions",
+    sections: [
+      {
+        title: "Ideal Gas Law",
+        content: `The ideal gas law relates pressure, volume, temperature, and moles of gas.`,
+      },
+    ],
+    form: 3,
+  },
+  "the-mole": {
+    title: "The Mole",
+    description: "Learn about the concept of the mole and its applications",
+    sections: [
+      {
+        title: "What is a Mole?",
+        content: `A mole is a unit that represents a specific number of particles.`,
+      },
+    ],
+    form: 3,
+  },
+  "organic-chemistry-1": {
+    title: "Organic Chemistry 1",
+    description: "Introduction to organic chemistry and its compounds",
+    sections: [
+      {
+        title: "Organic Compounds",
+        content: `Organic compounds contain carbon and are essential to life.`,
+      },
+    ],
+    form: 3,
+  },
+
+  "nitrogen-and-its-compounds": {
+    title: "Nitrogen and its Compounds",
+    description:
+      "Learn about the properties and reactions of nitrogen compounds",
+    sections: [
+      {
+        title: "Nitrogen Compounds",
+        content: `Nitrogen compounds play vital roles in biology and industry.`,
+      },
+    ],
+    form: 3,
+  },
+
+  "sulphur-and-its-compounds": {
+    title: "Sulphur and its Compounds",
+    description:
+      "Understanding the properties and reactions of sulphur compounds",
+    sections: [
+      {
+        title: "Sulphur Compounds",
+        content: `Sulphur compounds have diverse applications in industry and agriculture.`,
+      },
+    ],
+    form: 3,
+  },
+
+  "chlorine-and-its-compounds": {
+    title: "Chlorine and its Compounds",
+    description:
+      "Learn about the properties and reactions of chlorine compounds",
+    sections: [
+      {
+        title: "Chlorine Compounds",
+        content: `Chlorine compounds are used in water treatment and manufacturing.`,
+      },
+    ],
+    form: 3,
+  },
+
+  "acids-bases-salts": {
+    title: "Acids, Bases, and Salts",
+    description:
+      "Understanding the properties and reactions of acids, bases, and salts",
+    sections: [
+      {
+        title: "Acids and Bases",
+        content: `Acids turn blue litmus paper red, while bases turn red litmus paper blue.`,
+      },
+    ],
+    form: 4,
+  },
+
+  "energy-changes": {
+    title: "Energy Changes",
+    description: "Learn about energy changes in chemical reactions",
+    sections: [
+      {
+        title: "Endothermic and Exothermic Reactions",
+        content: `Endothermic reactions absorb heat, while exothermic reactions release heat.`,
+      },
+    ],
+    form: 4,
+  },
+
+  "reaction-rates": {
+    title: "Reaction Rates",
+    description: "Understanding the factors that affect reaction rates",
+    sections: [
+      {
+        title: "Factors Affecting Reaction Rates",
+        content: `Temperature, concentration, and catalysts influence reaction rates.`,
+      },
+    ],
+    form: 4,
+  },
+
+  "organic-chemistry-2": {
+    title: "Organic Chemistry 2",
+    description: "Advanced topics in organic chemistry and its compounds",
+    sections: [
+      {
+        title: "Functional Groups",
+        content: `Functional groups are specific arrangements of atoms in organic compounds.`,
+      },
+    ],
+    form: 4,
+  },
+
+  electrochemistry: {
+    title: "Electrochemistry",
+    description:
+      "Learn about the relationship between electricity and chemical reactions",
+    sections: [
+      {
+        title: "Electrochemical Cells",
+        content: `Electrochemical cells convert chemical energy into electrical energy.`,
+      },
+    ],
+    form: 4,
+  },
+
+  metals: {
+    title: "Metals",
+    description: "Understanding the properties and reactions of metals",
+    sections: [
+      {
+        title: "Properties of Metals",
+        content: `Metals are good conductors of heat and electricity.`,
+      },
+    ],
+    form: 4,
+  },
+
+  radioactivity: {
+    title: "Radioactivity",
+    description:
+      "Learn about the properties and applications of radioactive materials",
+    sections: [
+      {
+        title: "Types of Radioactivity",
+        content: `Radioactive decay involves alpha, beta, and gamma radiation.`,
+      },
+    ],
+    form: 4,
+  },
+};
